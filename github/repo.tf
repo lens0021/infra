@@ -192,3 +192,11 @@ module "ooui_femiwiki_theme" {
     "theme",
   ]
 }
+
+module "lambda" {
+  source      = "./modules/github-repository"
+  name        = "lambda"
+  description = "A simple lambda function which subscribes AWS SNS to ping Femiwiki's Discord webhook."
+  topics = [
+  ]
+}
